@@ -14,7 +14,7 @@ const Dashboard = () => {
         return;
       }
       try {
-        const res = await axios.get('http://localhost:5000/api/auth/me', {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/me`, {
           headers: { 'x-auth-token': token }
         });
         setUser(res.data);
