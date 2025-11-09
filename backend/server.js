@@ -13,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => res.send('Marketplace API is running'));
 app.use('/api/auth', authRoutes);
 
 // Connect to MongoDB
